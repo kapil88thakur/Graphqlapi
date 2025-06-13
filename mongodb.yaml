@@ -1,6 +1,7 @@
 services:
   mongo:
     image: mongo
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -19,6 +20,8 @@ services:
     ports:
       - 4700:4000
     environment:
-      MONGO_URL: mongodb://root:example@mongo:27017/zapd?authSource=admin
+      MONGO_URL: mongodb://mongo:27017/zapd
     depends_on:
       - mongo
+volumes:
+  mongo:{}
