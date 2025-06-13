@@ -19,6 +19,6 @@ services:
     ports:
       - 4700:4000
     environment:
-      MONGO_URL:mongodb://mongo:27017/zapd
+      MONGO_URL: mongodb://mongo:27017/zapd
     depends_on:
       - mongo
