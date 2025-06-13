@@ -5,7 +5,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
-    - /home/hp/db_volume:/data/db
+    - /home/hp/mongodb_vol:/data/db
   mongo-express:
     image: mongo-express
     ports:
