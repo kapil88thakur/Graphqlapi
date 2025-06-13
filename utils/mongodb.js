@@ -1,14 +1,11 @@
 const mongoose=require("mongoose")
 const MONGO_URL =require("./config")
-// mongoose.connect(MONGO_URL,{
-//    // useNewUrlParser:true,
-//    // useUnifiedTopolgy:true
-// });
-
-mongoose.connect(MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(MONGO_URL,{
+   // useNewUrlParser:true,
+   // useUnifiedTopolgy:true
 });
+
+
 mongoose.connection.on("connected",()=>{
    console.log( "Mongo db connected successfully");
 })
