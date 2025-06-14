@@ -6,9 +6,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
-      - type: bind
-        source: /home/hp/mongodb_vol
-        target: /data/db
+    - /home/hp/mongodb_vol: /data/db
   mongo-express:
     image: mongo-express
     ports:
@@ -22,12 +20,11 @@ services:
     ports:
       - 4700:4000
     volumes:
-      - type: bind
-        source: .
-        target: /app
+      - .: /app
     environment:
        MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
     depends_on:
       - mongo
 volumes:
   mongo: {}
+  app: {}
