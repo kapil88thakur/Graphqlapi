@@ -19,6 +19,8 @@ services:
     build: .
     ports:
       - 4700:4000
+    volumes:
+      - .: /app
     environment:
        MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
     depends_on:
