@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose=require("mongoose")
 const MONGO_URL =require("./config")
-mongoose.connect(MONGO_URL,{
+mongoose.connect(process.env.MONGO_URI,{
    //  useNewUrlParser:true,
    //  useUnifiedTopolgy:true
 }).then(() => console.log('✅ Connected to MongoDB'))
