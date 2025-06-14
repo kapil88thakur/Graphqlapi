@@ -20,7 +20,7 @@ services:
     ports:
       - 4700:4000
     environment:
-      - MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
+      - MONGO_URI=mongodb://root:example@mongo:27017/zapd?authSource=admin
     volumes:
       - /home/hp/Graphqlapi:/app
     depends_on:
