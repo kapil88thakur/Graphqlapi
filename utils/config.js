@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+
  //const MONGO_URL="mongodb+srv://ktkapilth:30oct1988@zapd.j1x9h.mongodb.net/"
  const MONGO_URL=process.env['MONGO_URI'];
  module.exports=MONGO_URL
