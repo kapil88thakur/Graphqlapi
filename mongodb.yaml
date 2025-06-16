@@ -25,6 +25,7 @@ services:
       - type: bind 
         source: /home/hp/Graphqlapi
         target: /app
+        working_dir: /app 
     environment:
        MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
     depends_on:
