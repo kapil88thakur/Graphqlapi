@@ -23,7 +23,7 @@ services:
       - 4700:4000
     volumes:
       - type: bind 
-        source: .
+        source: /home/hp/Graphqlapi
         target: /app
     environment:
        MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
