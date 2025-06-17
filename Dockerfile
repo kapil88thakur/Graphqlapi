@@ -8,5 +8,7 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 #RUN npm install -g nodemon 
-CMD ["npm", "run", "start", "--host", "0.0.0.0"]
+#CMD ["npm", "run", "start", "--host", "0.0.0.0"]
 #CMD ["npm", "run", "dev"]
+
+CMD ["node", "src/server.js"]
