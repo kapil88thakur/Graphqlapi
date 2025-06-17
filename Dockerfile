@@ -11,4 +11,4 @@ COPY . .
 #CMD ["npm", "run", "start", "--host", "0.0.0.0"]
 #CMD ["npm", "run", "dev"]
 
-CMD ["node", "src/server.js"]
+CMD ["npx","nodemon", "src/server.js"]
