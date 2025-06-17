@@ -11,6 +11,7 @@ module.exports ={
     Query:{
         users:async ()=>{ 
             const user= await User.find();
+            console.log("useres are",user);
             return user
         },
         user:async (_,{},context)=>{   
