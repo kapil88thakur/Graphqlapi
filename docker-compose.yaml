@@ -24,7 +24,7 @@ services:
    # working_dir: /app 
     volumes:
       - type: bind 
-        source: /var/www/Graphqlapi/src
+        source: /var/www/GraphQLAPI/src
         target: /app/src
     environment:
        MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
