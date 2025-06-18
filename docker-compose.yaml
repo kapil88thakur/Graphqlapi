@@ -7,7 +7,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - type: bind 
-        source: /home/hp/mongodb_vol
+        source: /var/www/mongodb_vol
         target: /data/db
   mongo-express:
     image: mongo-express
