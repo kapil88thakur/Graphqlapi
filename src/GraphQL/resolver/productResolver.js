@@ -5,7 +5,7 @@ const mongoose=require("../../utils/mongodb");
 const User=mongoose.model("VendorModel");
 const Shop=mongoose.model("ShopModel");
 const Product=mongoose.model("ProductModel");
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const {genToken}= require("../../middleware/authenticateToken");
 const jwt = require("jsonwebtoken");
 
