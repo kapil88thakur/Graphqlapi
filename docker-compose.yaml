@@ -29,7 +29,7 @@ services:
     environment:
       MONGO_URI: mongodb://root:example@mongo:27017/zapd?authSource=admin
     env_file:
-      - /src/.env
+      - .env
     depends_on:
       - mongo
 volumes:
